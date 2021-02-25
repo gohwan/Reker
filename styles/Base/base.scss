@@ -1,0 +1,168 @@
+@import '../Utils/variables', '../Utils/mixins';
+
+
+.ma0 {
+  margin: 0 auto;
+}
+
+.margin-right {
+  margin-right: auto;
+}
+
+.margin-left {
+  margin-left: auto;
+}
+
+.mat0 {
+  margin: 0 !important;
+}
+
+.feed-tag {
+  color: $tag-c;
+  font-size: 12px;
+}
+
+.feed-card {
+  @include feed-card();
+}
+
+.feed-card-post {
+  @include feed-card-post();
+}
+
+.tes-he {
+  background: $test-color;
+  height: 200px;
+}
+
+.icon-float-rig {
+  float: right;
+}
+
+.fl-le {
+  float: left !important;
+}
+
+.fl-ri {
+  float: right;
+}
+
+.pad-t3 {
+  padding-top: 3rem !important;
+}
+
+.pad-b3 {
+  padding-bottom: 3rem;
+}
+.pad-b8 {
+  padding-bottom: 8rem;
+}
+
+.fc-gr {
+  color: $small-color;
+}
+
+.po-lh {
+  line-height: 1.7rem;
+}
+
+.sm-fo {
+  font-size: 0.8rem;
+}
+
+.pad-ri1 {
+  padding-right: 1rem;
+}
+
+.tbg {
+  background: $primary-color;
+}
+
+.pad {
+  padding-bottom: 0.75rem;
+  padding-top: 0.75rem;
+}
+
+.pad-0 {
+  padding: 0 !important;
+}
+
+.pad-b0 {
+  padding-bottom: 0 !important;
+}
+
+.pad-t1 {
+  padding-top: 1rem !important;
+}
+
+.pad-b1 {
+  padding-bottom: 1rem;
+}
+
+.pad-15 {
+  padding: 1.5rem 0;
+}
+
+.bg-co {
+  background: $bg-c;
+}
+
+.pr-co {
+  color: $primary-color;
+}
+
+.u-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.pad-reset {
+  padding: 0.75rem 0 0;
+}
+
+.t-center {
+  text-align: center;
+}
+
+.t-right {
+  text-align: right;
+}
+
+.t-left {
+  text-align: left !important;
+}
+
+.title-color {
+  color: $title-color;
+}
+
+.u-cursor {
+  cursor: pointer;
+}
+
+.i-pad {
+  padding: 0 0.4rem;
+}
+
+.box-shadow {
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.card-bg {
+  background: none !important;
+}
+
+.d-block {
+  display: block;
+}
+
+.title-default {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.tag-margin {
+  margin-right: .5rem;
+}

@@ -1,0 +1,88 @@
+.business-wrap {
+    // background: blue;
+    // height: 1200px;
+    h4 {
+        color: red;
+    }
+
+    .business-title {        
+        text-align: center;
+
+        h1 {
+            color: #1da3dc;
+            font-weight: 600;
+            // font-family: 'Jeju Gothic', serif;
+            
+        }
+
+        p {
+            font-size: 1rem;
+            @include small {
+                font-size: 12px;
+            }
+        }
+    }
+
+    .business-intro {
+        li {
+            // background: red;
+            width: 30%;
+            padding: 1rem;
+            text-align: center;
+            margin: 1rem;
+
+            @include small {
+                width: 100%;
+                margin: 0;
+
+                &:last-child {
+                    padding-bottom: 3rem;
+                }
+            }
+        }
+        p {
+            padding: 1rem 0;
+            // font-family: 'Jeju Gothic', serif;
+            font-size: 13px;    
+                    
+        }        
+
+        h1 {
+            padding: 1rem 0;
+            font-weight: bold;
+            
+        }
+        
+        img {
+            width: 70px;
+        }
+
+        ul {
+            @include small {
+                display: block;
+            }
+        }
+    }
+
+}
+.partner-logo {
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    li {
+        display: inline-block;
+        justify-content: end;
+        
+
+    }
+}
+
+.client-intro {
+    padding: 1rem;
+    font-size: 13px;
+    text-align: center;
+    line-height: 1.5rem;
+    padding-bottom: 2rem;
+}

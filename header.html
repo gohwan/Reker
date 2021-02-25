@@ -1,0 +1,142 @@
+<div class="header-wrap shadow-on pad">
+  <p class="bod-top"></p>
+  <nav class="navbar navbar-light pad">
+    <a class="navbar-brand" href="main.html">
+      <img src="../img/brand-logo.png" width="140px" class="d-inline-block align-top" alt="ace">
+    </a>
+    <i class="fas fa-bars fl-ri menubt" style="font-size: 35px;"></i>
+    <!-- <div class="nav-slider fl-ri">
+        </div> -->
+  </nav>
+  <div class="menuDiv">
+    <div class="xbt">
+      <!-- <div style="    position: relative; top: 10px;"><a href="index.html"><img src="./img/main_logo.png" alt="" width="60px"><span style="color:black;"></a>해창</span></div> -->
+      <div class="btn_off">
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <ul class="menuTitle">
+      <li>
+        <a href="about.html" class="title">About</a>
+        <!-- <img src="img/care-about-planet.png" alt=""> -->
+      </li>
+      <li>
+        <a href="Business.html" class="title">Business</a>
+        <!-- <img src="img/hand-shake.png" alt=""> -->
+      </li>
+      <li>
+        <a href="PortFolio.html" class="title">PortFolio</a>
+        <!-- <img src="img/portfolio.png" alt=""> -->
+      </li>
+      <li>
+        <a href="Contact.html" class="title">Contact</a>
+        <!-- <img src="img/contact.png" alt=""> -->
+      </li>
+      <li class="md-block">
+        <a href="Client.html" class="title">Client</a>
+        <!-- <img src="img/contact.png" alt=""> -->
+      </li>
+    </ul>
+    <ul class="linkList">
+      <li>행사 전문 기업</li>
+      <li class="pad-b1"><span style="color:steelblue">(주)Reker</span></li>
+      <li>
+        <img src="../img/brand-logo.png" width="50%" class="d-inline-block align-top" alt="ace">
+      </li>
+    </ul>
+  </div>
+</div>
+<!-- <div class="container-fluid" style="background: red;">
+    <div></div>
+</div> -->
+
+<script>
+  var menuDiv = $(".menuDiv");
+  var menuBtn = $(".menubt");
+  var menuClose = $(".btn_off");
+  var black = $(".dimdBg");
+
+  menuDiv.css({
+    "right": "-400px"
+  });
+
+  menuBtn.click(function () {
+    // $('body').css('opacity','.8')
+    menuDiv.stop().animate({
+      "right": "0px"
+    });
+    menuDiv.css('display', 'block')
+    black.css({
+      "display": "block",
+      "opacity": "0"
+    }).stop().animate({
+      "opacity": "0.8"
+    }, 300);
+    $('.bod-top').animate({
+      left: "-101%"
+    }, 500)
+    $('.carousel-caption').css('z-index', '0');
+    // $(".navbar-brand").stop().animate({
+    //       "opacity": "0"
+    //     }, 500);
+  });
+
+  menuClose.click(function () {
+    menuDiv.stop().animate({
+      "right": "-400px"
+    });
+    black.hide();
+    $('.bod-top').stop().animate({
+      left: "0%"
+    }, 500)
+    $('.carousel-caption').css('z-index', '2')
+    // $(".navbar-brand").stop().animate({
+    //   "opacity": "1"
+    // }, 500);
+  });
+
+  black.click(function () {
+    menuDiv.stop().animate({
+      "right": "-400px"
+    });
+    black.hide();
+  });
+
+  function test() {
+    $('.menubt').click(function () {
+      $(".navbar-brand").stop().animate({
+        "opacity": "0"
+      }, 500);
+    });
+
+    $('.btn_off').click(function () {
+      $(".navbar-brand").stop().animate({
+        "opacity": "1"
+      }, 500);
+    });
+
+  }
+
+    $('.menubt').click(function () {
+  if ($(window).width() < 767) {
+    $(".navbar-brand").stop().animate({
+        "opacity": "0"
+      }, 500);
+    } else {
+      
+    }
+  });
+
+  $('.btn_off').click(function () {
+  if ($(window).width() < 767) {
+    $(".navbar-brand").stop().animate({
+        "opacity": "1"
+      }, 500);
+    } else {
+      
+    }
+  });
+    
+  
+</script>

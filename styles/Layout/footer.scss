@@ -1,0 +1,38 @@
+.footer-wrap {
+    padding-top: 5rem;
+}
+.footer {
+    width: 100%;
+    height: 100px;
+    background: #fff;
+    
+    font-size: 13px;
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Jeju Gothic', serif;
+     position: absolute;
+    // bottom: 0; 
+    
+    @include small {
+        height: 90px;
+        position: static;
+
+    }
+}
+
+.company-info {
+    padding: 1rem;
+
+    @include small {
+        padding: .5rem;
+    }
+}
+
+.company-info p{
+    padding: .2rem;
+
+    @include small {
+        font-size: 9px;
+    }
+}
+

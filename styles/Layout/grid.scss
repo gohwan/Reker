@@ -1,0 +1,138 @@
+//utils
+@import '../Utils/variables', '../Utils/mixins';
+
+
+
+.feed-wrap {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding-top: 5.5rem;
+  min-height: calc(90vh - 90px);
+
+  .feed-main-container {
+    float: left;
+    // margin: 0 auto;
+    width: 64%;
+  }
+
+  .feed-card-container {
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .feed-ask-title {
+    padding-bottom: 1rem;
+    padding-top: 0.75rem;
+  }
+
+  .bot-border {
+    border-bottom: 1px solid $border-color;
+  }
+
+  .feed-wait-content {
+    padding: 1.15rem;
+  }
+
+  .feed-wait-intro {
+    // border-bottom: 1px solid $border-color;
+    p {
+      margin-left: 1rem;
+      padding-bottom: 0.75rem;
+
+      span:nth-child(1) {
+        font-weight: bold;
+        font-size: 1.2rem;
+      }
+      span {
+        font-weight: bold;
+      }
+    }
+  }
+
+  .feed-wait-ask {
+    padding-bottom: 2rem;
+  }
+
+  .feed-wait-answer span {
+    padding: 0.2rem;
+
+    &:nth-child(1) {
+      padding: 0;
+    }
+  }
+
+  .wait-float {
+    float: right;
+  }
+
+  .feed-tag {
+    color: $tag-c;
+    font-size: 12px;
+    padding-bottom: 0.5rem;
+
+    span {
+      float: right;
+
+      i:hover {
+        color: $primary-color;
+      }
+    }
+  }
+
+  .feed-awesome-answer {
+    font-size: 13px;
+  }
+}
+
+
+
+.feed-side-container {
+  float: right;
+  position: relative;
+  width: 30%;
+  // margin: 0 auto;
+  .feed-card {
+    text-align: center;
+  }
+
+  .aside-user-header {
+    // border-bottom: 1px solid #f2f2f2;
+    color: #545454;
+    padding-bottom: 1rem;
+    background: #fff;
+    font-weight: bold;
+  }
+
+  .aside-user-content {
+    padding: 1rem;
+    justify-content: space-between;
+    align-items: center;
+
+    p {
+      padding: 0.47rem;
+    }
+
+    .aside-user-follow {
+      // padding-bottom: 1.6rem;
+    }
+  }
+}
+
+
+.aside-user {
+  box-shadow: 0 4px 12px 0 $card-shadow;
+}
+
+.intro-title{
+  color: $primary-color;
+  // font-weight: bold;
+  font-size: 20px;
+  line-height: 50px;
+ 
+  }
+
+  $breakpoints: (
+  'medium': (min-width: 800px),
+  'large': (min-width: 1000px),
+  'huge': (min-width: 1200px),
+);

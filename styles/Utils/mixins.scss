@@ -1,0 +1,61 @@
+@mixin sizing($wid:100%) {
+    width: $wid;
+  }
+  
+  @mixin full-size($wid:100%, $hei:100%) {
+    width: $wid;
+    height: $hei;
+  }
+  
+  @mixin profile-img($wid:100%, $hei:100%, $bor-rad:100%) {
+    width: $wid;
+    height: $hei;
+    border-radius: $bor-rad;
+  }
+  
+  @mixin feed-card() {
+    margin-top: 1.5rem;
+    padding: 1.125rem;
+    box-shadow: 0 2px 7px 0 $card-shadow;
+    background: $white;
+    // border-bottom: 1px solid $border-color;
+    border-radius: 10px;
+  }
+  
+  @mixin feed-card-post() {
+    margin-top: 1.5rem;
+    padding: 2rem;
+    box-shadow: 0 4px 12px 0 $card-shadow;
+    background: $white;
+  }
+  
+  @mixin feed-card-container($wid:90%) {
+    width: $wid;
+    margin: 0 auto;
+  }
+  
+  @mixin feed-tag($pad-bot:rem) {
+    color: $tag-c;
+    font-size: .75rem;
+    padding-bottom: $pad-bot;
+  }
+
+
+  @mixin small {
+    @media (max-width: #{$small}) {
+        @content;
+    }
+ }
+
+ @mixin medium {
+  @media (max-width: #{$medium}) {
+      @content;
+  }
+}
+
+// @mixin large {
+//   @media (max-width: #{$medium}) {
+//       @content;
+//   }
+// }
+  

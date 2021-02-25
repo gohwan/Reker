@@ -1,0 +1,38 @@
+@charset "UTF-8";
+// @import './Vendors/scss/bootstrap';
+
+@import url('https://use.fontawesome.com/releases/v5.4.2/css/all.css');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400');
+@import url('https://fonts.googleapis.com/css?family=Nanum+Myeongjo');
+@import url('http://fonts.googleapis.com/earlyaccess/hanna.css');
+@import url('http://fonts.googleapis.com/earlyaccess/jejugothic.css');
+
+//Vendors
+// @import
+//   './Vendors/scss/bootstrap';
+// //utils
+
+@import
+'./Utils/variables',
+'./Utils/mixins';
+// bases
+@import
+ './Base/reset',
+ './Base/base';
+// layout+
+@import
+  './Layout/grid',
+  './Layout/footer',
+  './Layout/header';
+//pages
+@import
+    './Pages/main',
+    './Pages/about',
+    './Pages/business',
+    './Pages/contact',
+    './Pages/portfolio';
+    // './Pages/join',
+    // './Pages/profile';
+
+
+  

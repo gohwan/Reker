@@ -1,0 +1,153 @@
+.header-wrap {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  // background: ghostzwhite;
+  z-index: 99;
+  transition: all .5s;
+
+  
+  .navbar-brand {
+    width: 10%;
+  }
+  
+  .menubt {
+    cursor: pointer;
+    color: #000;
+  }
+
+  .navbar {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+
+
+.shadow-on {
+  box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.05);
+}
+
+div.menuDiv {
+  width: 400px;
+  height: 1500px;
+  min-height: 100%;
+  background: ghostwhite;
+  position: absolute;
+  top: 0;
+  right: 400px;
+  z-index: 1;
+  display: none;
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+
+  @include small {
+    width: 350px;
+  }
+}
+
+.xbt {
+  @include small {
+    padding-bottom: 2rem;
+  }
+}
+
+.btn_off {
+  top: 2rem;
+  position: absolute;
+  right: 2.4rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+}
+
+div.btn_off span:nth-child(1) {
+  transform: rotate(-135deg);
+}
+
+div.btn_off span:nth-child(2) {
+  transform: rotate(135deg);
+}
+
+div.btn_off span {
+  position: absolute;
+  top: 0.2rem;
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: steelblue;
+}
+
+.menuTitle {
+  margin-top: 10rem;
+
+  @include small {
+    margin-top: 3rem;
+  }
+
+  li {
+    text-align: center;
+    // font-family: 'Jeju Gothic', serif;
+    font-size: 2rem;
+    transition: all 0.5s cubic-bezier(0.770, 0.000, 0.175, 1.000);
+    -webkit-transition: all 0.5s cubic-bezier(0.770, 0.000, 0.175, 1.000);
+    -moz-transition: all 0.5s cubic-bezier(0.770, 0.000, 0.175, 1.000);
+    -o-transition: all 0.5s cubic-bezier(0.770, 0.000, 0.175, 1.000);
+
+    &:last-child {
+      display: none;
+    }
+  }
+
+  img {
+    width: 25px;
+    padding-top: 1.3rem;
+    position: absolute;
+    right: 38px;
+  }
+}
+
+div.menuDiv>.menuTitle li>.title {
+  // display: block;
+  height: 57px;
+  /* border-bottom: 1px solid #dedede; */
+  font-size: 2rem;
+  color: #000;
+  line-height: 100px;
+  text-align: center;
+  font-weight: 500;
+  padding: 0 5rem;
+  transition: color 0.2s ease-in;
+  -webkit-transition: color 0.2s ease-in;
+  -moz-transition: color 0.2s ease-in;
+  -o-transition: color 0.2s ease-in; 
+
+  @include small {
+    font-size: 1.5rem;
+    line-height: 80px;
+  }
+}
+
+div.menuDiv>.menuTitle li>.title:hover {
+  color: #1da3dc;
+
+}
+
+.linkList {
+  text-align: center;
+  margin-top: 5rem;
+  font-family: 'hanna', serif;
+  font-size: 1.4rem;
+  
+  @include small {
+    margin-top: 2rem;
+  }
+} 
+
+// .active {
+//   transition: all 1s;
+//   background: white;
+//   height: 60px;
+// }

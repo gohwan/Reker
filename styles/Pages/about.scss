@@ -1,0 +1,212 @@
+/* about */ 
+
+.about-wrap {
+    width: 100%;
+    padding-bottom: 5rem;
+    display: flex;
+
+    @include small {
+        display: block;
+    }
+}
+
+.about-title {
+    text-align: center;
+    font-size: 13px;
+    // border-bottom: 3px solid #d9d9d9;
+    padding: 5rem 0;
+    letter-spacing: 5px;
+    position: relative;
+}
+
+.about-title:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 50px;
+    display: block;
+    width: 48px;
+    height: 2px;
+    margin-left: -27px;
+    font-size: 0;
+    line-height: 0;
+    background: $primary-color;
+}
+
+.intro {
+    width:50%;
+    height:500px;
+
+    @include small {
+        width: 100%;
+    }
+}
+
+.tab-wrap {
+    display: block;
+
+    .tab-title li {
+        padding: 0 .5rem;
+
+        @include small {
+            font-size: 12px;
+            width: 20%;
+        }
+    }
+}
+
+.history {
+    overflow-y: scroll;    
+    height:500px;      
+    @include small {
+        margin: 0 auto;
+        width: 80%;
+        text-align: center;
+    }      
+}
+
+
+
+.history ul {
+    // list-style: square;
+    position: relative;
+
+    span {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        color: $primary-color;        
+    }
+
+    span:nth-child(2) {
+        top: 365px;
+    }
+    span:nth-child(3) {
+        top: 527px;
+    }
+    span:nth-child(4) {
+        top: 1327px;
+    }
+    span:nth-child(5) {
+        top: 1765px;
+    }
+}
+
+.about-tab ul li::before {
+    content: "\25AA";
+  color: $primary-color;
+  font-weight: bold;
+  display: inline-block; 
+  width: 1rem;
+  margin-left: 1em;
+}
+
+.history li {
+    line-height: 2.5;
+    white-space: nowrap;
+    // margin-left: 3rem;
+}
+
+.client {
+    width: 100%;
+    background: red;
+    height: 100px;
+    /* clear: both; */
+    text-align: center;
+}
+
+.client div {
+    width: 100%;
+    margin: 0 auto;        
+}
+
+.client li {
+    float: left;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.md-none {
+    @include small {
+        display: none;
+    }
+}
+
+.company-intro {
+    width: 100%;
+    text-align: center;
+    padding:4rem;
+
+    @include small {
+        padding: 1.7rem;
+    }
+}
+
+.intro-content {
+    position: relative;
+    top: -50px;
+
+    h4 {
+        @include small {
+            font-size: 1.1rem;
+            line-height: 1.7rem;
+        }
+    }
+}
+
+.ceo-intro {
+    // background: lightgray;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    height: 200px;
+
+    @include small {
+        position: static;
+        width: 70%;
+        margin:  0 auto;
+    }
+
+    em {
+        text-align: left;
+        display: block;
+    }
+
+    span {
+        position: absolute;
+        right: 282px;
+        bottom: 0;
+        top: 200px;
+        display: block;
+        padding: 17px 0 37px;
+        border-top: 1px solid #d9d9d9;
+        color: #878787;
+        z-index: 5;
+
+        @include small {
+            position: static;
+        }
+    }    
+
+    img {
+        margin-left: 5rem;
+        margin-top: 3rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

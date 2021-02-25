@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Reker</title>
+  <!-- <link rel="icon" href="./img/icon-logo.png"> -->
+   <link rel="icon" sizes="16x16 32x32" href="./img/favicon.ico?v=2">
+  
+
+  <!-- cdn -->
+        <link rel="stylesheet" href="../styles/vendor/bootstrap.min.css">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css">
+  <!-- <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=uv51QLSccpypgYU8D48x"></script> -->
+  <link rel="stylesheet" href="../styles/index.css">
+
+</head>
+
+<body>
+  <div class="wrap">
+    <!-- 헤더 -->
+    <div class="header-wrap">
+    </div>
+
+    <div class="feed-wrap contact-wrap blockContainer">
+      <h1 class="about-title"><br>Contact Us</h1>
+      <div id="map" class="blockA" style="width:100%;height:400px;"></div>
+      <script type="text/javascript"
+        src="//dapi.kakao.com/v2/maps/sdk.js?appkey=0f84194a9c303899ded4a4f0d0347e8f&libraries=services"></script>
+      <script>
+        var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+          mapOption = {
+            center: new daum.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
+            level: 3 // 지도의 확대 레벨
+          };
+
+        // 지도를 생성합니다    
+        var map = new daum.maps.Map(mapContainer, mapOption);
+
+        // 주소-좌표 변환 객체를 생성합니다
+        var geocoder = new daum.maps.services.Geocoder();
+
+        // 주소로 좌표를 검색합니다
+        geocoder.addressSearch('서울특별시 중랑구 동일로 157길 60', function (result, status) {
+
+          // 정상적으로 검색이 완료됐으면 
+          if (status === daum.maps.services.Status.OK) {
+
+            var coords = new daum.maps.LatLng(result[0].y, result[0].x);
+
+            // 결과값으로 받은 위치를 마커로 표시합니다
+            var marker = new daum.maps.Marker({
+              map: map,
+              position: coords
+            });
+
+            // 인포윈도우로 장소에 대한 설명을 표시합니다
+            var infowindow = new daum.maps.InfoWindow({
+              content: '<div style="width:150px;text-align:center;padding:6px 0;">Reker</div>'
+            });
+            infowindow.open(map, marker);
+
+            // 지도의 중심을 결과값으로 받은 위치로 이동시킵니다
+            map.setCenter(coords);
+          }
+        });
+      </script>
+      <div class="container blockB">
+        <div class="row">
+          <div class="col">
+            <table>
+              <tbody>
+                <tr>
+                  <td> <i class="fas fa-map-marker-alt"></i>ADDRESS</td>
+                  <td>
+                    <span class="pad-t1"> 서울시 중랑구 동일로 157길 60, A506호 (기림빌딩, 묵동)</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td> <i class="fas fa-phone-volume"></i> TEL/FAX</td>
+                  <td>1899-4004 / 02-2207-0888</td>
+                </tr>
+                <tr>
+                  <td> <i class="fas fa-envelope"></i> EMAIL</td>
+                  <td>dhyu@reker.kr<br></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="col">
+            <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
+            <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
+            <form name="sentMessage" id="contactForm" novalidate="novalidate">
+              <div class="control-group">
+                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                  <label>Name</label>
+                  <input class="form-control" id="name" type="text" placeholder="보내는 분" required="required"
+                    data-validation-required-message="이름 을 입력해주세요.">
+                  <p class="help-block text-danger"></p>
+                </div>
+              </div>
+              <div class="control-group">
+                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                  <label>Email</label>
+                  <input class="form-control" id="email" type="email" placeholder="이메일을 입력해주세요." required="required"
+                    data-validation-required-message="이메일 을 입력해주세요." value="">
+                  <p class="help-block text-danger"></p>
+                </div>
+              </div>
+              <div class="control-group">
+                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                  <label>Phone</label>
+                  <input class="form-control" id="phone" type="tel" placeholder="연락처" required="required"
+                    data-validation-required-message="연락처 를 입력해주세요.">
+                  <p class="help-block text-danger"></p>
+                </div>
+              </div>
+              <div class="control-group">
+                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                  <label>Comments</label>
+                  <textarea class="form-control" id="message" rows="5" placeholder="문의사항" required="required"
+                    data-validation-required-message="문의하실 보내실 내용을 적어주세요. !"></textarea>
+                  <p class="help-block text-danger"></p>
+                </div>
+              </div>
+              <br>
+              <div id="success"></div>
+              <div class="form-group">
+                <button class="btn btn-primary btn-xl" id="sendMessageButton">Send</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-wrap"></div>
+  </div>
+
+</body>
+<script src="js/jquery-3.3.1.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+  integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+  integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="js/script.js"></script>
+<script src="./js/jqBootstrapValidation.js"></script>
+<script src="./js/contact_me.js"></script>
